@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" action="add" >
+    {% csrf_token %}
+    <label class="table-success">ID</label>
+    <div>{{ form.uid }}</div>
+    <label>Name:</label>
+    <div>{{ form.uname }}</div>
+    <label>Email</label>
+    <div>{{ form.uemail }}</div>
+    <label>Contact</label>
+    <div>{{ form.ucontact }}</div>
+    <div><button value="submit">Add</button></div>
+
+</form>
+
+
+{% endblock %}
+
